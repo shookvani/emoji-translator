@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Emoji Translator</title>
+        <style type="text/css" media="screen">
+
+  body, html {
+
+ 
+    background-color: #000000;
+    font-family: Utopia;
+    font-size: 12pt;
+    text-align: center;
+    color:azure;
+    background-image: url('2.jpg');
+    background-repeat: no-repeat;
+  }
+
+
+    </style>
+    </head>
+    <body>
+        <br><br><br><br>
+        <script>
+             var translation=["grinning face","grinning face with big eyes","grinning face with smiling eyes", "beaming face","squinting face","uncomfortable laugh","laughing out loud (LOL)", "love heart","fire","in love","racoon","orangutan","Japan","South Korea","Germany","China","USA","France","Spain","Italy", "Russia","Great Britian","Ansecion Island","grape","melon","watermelon","tangerine","lemon","banana","pineapple","mango","leafy green salad","chestnut","peanut","stuffed flatbread","falfel","sjallow pan of food","cooking","pot of food","bowl with spoon","green salad","canned food","osechi (bento box)","nure-senbei (Rice Cracker)","onigiri (Rice Ball)","cooked rice","pleading face","Mizaru (see-no-evil monkey)","Kikazaru (hear-no-evil Monkey)","Iwazaru (speak-no-evil monkey)","dizzy"];
+             var smileysandpeople= ["😀", "😃", "😄", "😁","😆","😅","😂","❤️","🔥","🥰","🦝 ","🦧","🇯🇵","🇰🇷","🇩🇪","🇨🇳","🇺🇸","🇫🇷","🇪🇸","🇮🇹","🇷🇺","🇬🇧","🇦🇨","🍇","🍈","🍉","🍊","🍋","🍌","🍍","🥭","🥬","🌰","🥜","🥙","🧆","🥘","🍳","🍲","🥣","🥗","🥫", "🍱","🍘","🍙","🍚","🥺","🙈","🙉","🙊","💫"];
+        </script>
+           <h1>Please type in 1 emoji or some text to be translated. Your translation will come as a window alert on your screen.</h1>
+        <form name="test" id="emoji" onsubmit="return translator()">
+ 
+            Emoji<br>
+            <input type="string" name="emoji"><br>
+
+            <input type="submit" value="submit"> <br><br>
+        </form>
+        <form id="text" onsubmit="return texttranslate()">
+            Text<br>
+            <input type="string" name="text"><br>
+
+            <input type="submit" value="submit"> 
+
+        </form>
+        <script>
+          
+            function translator() {
+                var x=document.getElementById("emoji");
+                var emoji=x.elements[0].value;
+            
+               // window.alert(emoji.elements[0].value);
+                //return true;
+                
+                for (i=0;i<smileysandpeople.length;i++) {
+    
+                    if (emoji==smileysandpeople[i]) {
+                        window.alert(translation[i]);
+                        return true;
+                    }
+            
+                
+            }
+                return false;
+            }
+            function texttranslate() {
+                var x=document.getElementById("text");
+                var text=x.elements[0].value;
+            
+               // window.alert(emoji.elements[0].value);
+                //return true;
+                
+                for (i=0;i<translation.length;i++) {
+    
+                    if (text==translation[i]) {
+                        window.alert(smileysandpeople[i]);
+                        return true;
+                    }
+            
+                
+            }
+                return false;
+            }
+            
+        
+        </script>
+        
+    </body>
+</html>
+
+<!--
+mansae
+pretty u
+boom boom
+adore u
+
+
+
+
+
+
+
+50 emojis
+goes both ways
+string of emojis
+chinese
